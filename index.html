@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <title>Frontend Mentor | Manage landing page</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Baloo+Bhai+2&family=Be+Vietnam+Pro&family=Bree+Serif&display=swap" rel="stylesheet">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    #burger {
+      display: none;
+    }
+
+    .right {
+      right: 9999px;
+    }
+
+    @media (max-width: 1024px) {
+      .navitems {
+        flex-direction: column;
+        justify-content: center;
+        position: absolute;
+        width: 95vw;
+        z-index: 100;
+        height: 60vh;
+        top: 6rem;
+        color: white;
+        background-color: #ff7957;
+        transition: all 1.4s ease-in-out;
+      }
+.button{margin-bottom: 20px;}
+      .navul {
+        flex-direction: column;
+        justify-content: center;
+        gap: 20px;
+      }
+
+      .navul li {
+        height: 25px;
+        color: whtie;
+      }
+
+      .logo {
+        position: absolute;
+        left: 20px;
+      }
+
+      #burger {
+        display: flex;
+        position: absolute;
+        right: 30px;
+      }
+      .rightText{height: 100vh;}
+    }
+    .rightText{height: 90vh;}
+    @media (max-width: 340px) {
+      .rightText{height: 170vh;}
+    }
+
+    .cardAnisha , .cardBravo , .cardWatts{
+      position: relative;
+    }
+    .cardAnisha::before{
+      content: "";
+      min-width: 66px;
+      height: 66px;
+      margin-bottom: 25px;
+      background-image: url('./images/avatar-anisha.png');
+      background-position: center;
+      background-size: cover;
+      position: absolute;
+      top: -10%;
+    }
+    .cardBravo::before{
+      content: "";
+      min-width: 66px;
+      height: 66px;
+      margin-bottom: 25px;
+      background-image: url('./images/avatar-ali.png');
+      background-position: center;
+      background-size: cover;
+      position: absolute;
+      top: -10%;
+    }
+    .cardWatts::before{
+      content: "";
+      min-width: 66px;
+      height: 66px;
+      margin-bottom: 25px;
+      background-image: url('./images/avatar-richard.png');
+      background-position: center;
+      background-size: cover;
+      position: absolute;
+      top: -10%;
+    }
+  </style>
+</head>
+<body style="font-family: 'Be Vietnam Pro', sans-serif;">
+<header> 
+   <nav class="w-full h-24  flex justify-around items-center  z-50 md:m-0  ">
+  <img src="./images/logo.svg" alt="logo" class="logo z-50">
+  <div class="navitems z-50 right lg:w-2/3 lg:h-full flex justify-around items-center">
+    <ul class="navul w-1/2 h-full flex justify-center items-center gap-8">
+      <li
+        class="h-full flex justify-center items-center hover:border-b-4 border-[#f3613c] px-2 lg:text-gray-500 text-white hover:text-black hover:font-semibold">
+        <a href="#">Home</a>
+      </li>
+      <li
+        class="h-full flex justify-center items-center hover:border-b-4 border-[#f3613c] px-2 lg:text-gray-500 text-white hover:text-black hover:font-semibold">
+        <a href="#">About</a>
+      </li>
+      <li
+        class="h-full flex justify-center items-center hover:border-b-4 border-[#f3613c] px-2 lg:text-gray-500 text-white hover:text-black hover:font-semibold">
+        <a href="#">Contact</a>
+      </li>
+      <li
+        class="h-full flex justify-center items-center hover:border-b-4 border-[#f3613c] px-2 tlg:ext-gray-500 htext-white over:text-black hover:font-semibold">
+        <a href="#">Blog</a>
+      </li>
+      <li
+        class="h-full flex justify-center items-center hover:border-b-4 border-[#f3613c] px-2 lg:text-gray-500 text-white hover:text-black hover:font-semibold">
+        <a href="#">Careers</a>
+      </li>
+    </ul>
+    <button class="] z-50 drop-shadow button text-white w-[160px] h-[70px] lg:h-[60%] rounded-full bg-[#f3613c] hover:bg-[#ff7957]">Get Started</button>
+  </div>
+  <img id="burger" class="z-50" src="./images/icon-hamburger.svg" alt="">
+</nav>
+<img src="./images/bg-tablet-pattern.svg" alt="" class="absolute top-[-20px] sm:top-[-110px] right-[0px] z-10">
+<div class="heading-c w-full lg:h-[80vh] flex lg:justify-evenly justify-around items-center lg:flex-row flex-col-reverse" >
+<div class="text w-[80%] lg:w-[40%] z-40 lg:h-full flex flex-col justify-center items-center">
+  <h1 class="sm:text-5xl text-2xl font-black leading-[40px] sm:leading-[65px]" >Bring everyone together to build better products.</h1>
+  <p class="text-gray-500 py-4 sm:py-7 leading-7 text-lg ">Manage makes it simple for software teams to plan day-to-day tasks while keeping the larger team goals in view.</p>
+  <div class="buttonbox w-full h-[80px]">
+  <button class=" z-50 drop-shadow button text-white w-[160px] h-[70px]  rounded-full bg-[#f3613c] hover:bg-[#ff7957]">Get Started</button>
+  </div>
+
+</div>
+<img src="./images/illustration-intro.svg" class="z-40" alt="">
+</div>
+</header>
+<main>
+<div class="difference w-full flex justify-evenly my-6 lg:flex-row flex-col lg:items-start items-center">
+  <div class="leftText w-[87%] sm:w-[70%] lg:w-[38%] 2xl:w-[30%] sm:h-[35vh] flex flex-col justify-center sm:justify-around px-6 mb-8">
+  <h1 class="sm:text-3xl text-2xl font-black leading-[40px] z-40" >What’s different about Manage?</h1>
+  <p class="text-gray-500 leading-6 text-lg z-40">Manage provides all the functionality your team needs, without 
+    the complexity. Our software is tailor-made for modern digital 
+    product teams. </p>
+    <img src="./images/bg-tablet-pattern.svg" alt="" class="absolute top-[114vh] left-[-320px] z-10">
+  </div>
+  <div class="rightText w-[95%] sm:w-[85%] lg:w-[55%] 2xl:w-[40%]  flex justify-evenly sm:justify-around items-center flex-col  z-40">
+    <div class="box flex justify-around items-start sm:mb-7 sm:h-[26vh] w-full">
+      <button class="z-50 drop-shadow button text-white w-[70px] sm:w-[100px] h-[45px]  rounded-full bg-[#f3613c] ">01</button>
+      <div class="text w-[85%] h-full flex flex-col  px-2 ">
+        <h1 class="font-black text-xl">Track company-wide progress</h1>
+        <p class="text-gray-500 sm:leading-8 sm:py-6 sm:text-lg ">  See how your day-to-day tasks fit into the wider vision. Go from 
+          tracking progress at the milestone level all the way done to the 
+          smallest of details. Never lose sight of the bigger picture again.</p>
+      </div>
+    </div>
+    <div class="box flex justify-around items-start sm:mb-7 sm:h-[26vh] w-full">
+      <button class="z-50 drop-shadow button text-white w-[70px] sm:w-[100px] h-[45px]  rounded-full bg-[#f3613c] ">02</button>
+      <div class="text w-[85%] h-full flex flex-col  px-2 ">
+        <h1 class="font-black text-xl">Advanced built-in reports</h1>
+        <p  class="text-gray-500 sm:leading-8 sm:py-6 sm:text-lg ">Set internal delivery estimates and track progress toward company 
+          goals. Our customisable dashboard helps you build out the reports 
+          you need to keep key stakeholders informed.</p>
+      </div>
+    </div>
+    <div class="box flex justify-around items-start sm:mb-7 sm:h-[26vh] w-full">
+      <button class="z-50 drop-shadow button text-white w-[70px] sm:w-[100px] h-[45px]  rounded-full bg-[#f3613c] ">03</button>
+      <div class="text w-[85%] h-full flex flex-col  px-2 ">
+        <h1 class="font-black text-xl">Everything you need in one place</h1>
+        <p  class="text-gray-500 sm:leading-8 sm:py-6 sm:text-lg "> Stop jumping from one service to another to communicate, store files, 
+          track tasks and share documents. Manage offers an all-in-one team 
+          productivity solution.</p>
+      </div>
+    </div>
+  </div>
+</div>
+<h1 class="text-center font-black lg:text-4xl text-2xl py-5 pb-6 ">What they’ve said</h1>
+<div class="clients w-full lg:h-[50vh] h-[125vh] flex justify-around items-center lg:flex-row flex-col">
+ <div class="card xl:w-[23rem] 2xl:w-[30rem] cardAnisha w-[85%] sm:w-[25rem] z-40 lg:w-[20rem] md:w-[35rem]  sm:p-0 xl:h-[32vh] h-[36vh] bg-slate-100 flex justify-center items-center flex-col px-3 sm:px-5">
+<h1 class="font-black text-xl ">Anisha Li</h1>
+<p class="py-3 text-gray-400 text-xs sm:text-sm">“Manage has supercharged our team’s workflow. The ability to maintain 
+  visibility on larger milestones at all times keeps everyone motivated.”</p>
+ </div>
+ <div class="card xl:w-[23rem] 2xl:w-[30rem] cardBravo w-[85%] sm:w-[25rem] z-40 lg:w-[20rem] md:w-[35rem]  sm:p-0 xl:h-[32vh] h-[36vh] bg-slate-100 flex justify-center items-center flex-col px-3 sm:px-5">
+<h1 class="font-black text-xl ">Ali Bravo</h1>
+<p class="py-3 text-gray-400 text-xs sm:text-sm">“We have been able to cancel so many other subscriptions since using 
+  Manage. There is no more cross-channel confusion and everyone is much 
+  more focused.”</p>
+ </div>
+ <div class="card xl:w-[23rem] 2xl:w-[30rem] cardWatts w-[85%] sm:w-[25rem] z-40 lg:w-[20rem] md:w-[35rem] sm:p-0 xl:h-[32vh] h-[36vh] bg-slate-100 flex justify-center items-center flex-col px-3 sm:px-5">
+<h1 class="font-black text-xl ">Richard Watts </h1>
+<p class="py-3 text-gray-400 text-xs sm:text-sm">“Manage allows us to provide structure and process. It keeps us organized 
+  and focused. I can’t stop recommending them to everyone I talk to!”</p>
+ </div>
+
+
+</div>
+<div class="buttonbox w-full h-[75px] flex justify-center items-start mb-5">
+  <button class=" z-50 drop-shadow button text-white w-[160px] h-[60px]  rounded-full bg-[#f3613c] hover:bg-[#ff7957]">Get Started</button>
+  </div>
+  <div class="simplify w-full h-[20vh] bg-[#f3613c] flex justify-evenly items-center md:flex-row flex-col">
+<h1 class="text-white font-black xl:text-4xl text-xl sm:text-2xl"> Simplify how your team works today.</h1>
+<button class=" z-50 drop-shadow button bg-white w-[160px] h-[60px]  rounded-full text-[#f3613c] hover:text-[#ff7957]">Get Started</button>
+ 
+  </div>
+</main>
+<footer class="w-full lg:h-[35vh] bg-[#1e1e26] flex justify-evenly lg:justify-around items-center lg:flex-row flex-col-reverse h-[65vh]">
+<div class="logoDiv w-full sm:w-1/4 h-full flex justify-evenly items-center flex-col ">
+  <img class="sm:w-auto w-[50%]" src="./images/logo.jpg" alt="">
+  <ul class="w-full h-24 flex justify-center gap-5 items-center">
+    <img class="hover:bg-[#f26641] rounded-full" src="./images/icon-facebook.svg" alt="">
+    <img class="hover:bg-[#f26641] rounded-full" src="./images/icon-youtube.svg" alt="">
+    <img class="hover:bg-[#f26641] rounded-full" src="./images/icon-twitter.svg" alt="">
+    <img class="hover:bg-[#f26641] rounded-full" src="./images/icon-pinterest.svg" alt="">
+    <img class="hover:bg-[#f26641] rounded-full" src="./images/icon-instagram.svg" alt="">
+  </ul>
+</div>
+<div class="uldiv w-[90%] sm:w-[70%] lg:w-2/6 h-full flex justify-around items-center">
+  <ul class="w-1/3 h-full flex flex-col justify-center items-center gap-4">
+    <li class="text-gray-300 hover:text-white cursor-pointer">Home</li>
+    <li class="text-gray-300 hover:text-white cursor-pointer">Pricing</li>
+    <li class="text-gray-300 hover:text-white cursor-pointer">Products</li>
+    <li class="text-gray-300 hover:text-white cursor-pointer">About Us</li>
+  </ul>
+  <ul class="w-1/3 h-full flex flex-col justify-center items-center gap-4">
+    <li class="text-gray-300 hover:text-white cursor-pointer">Community</li>
+    <li class="text-gray-300 hover:text-white cursor-pointer">Careers</li>
+    <li class="text-gray-300 hover:text-white cursor-pointer">Privacy Policy</li>
+  </ul>
+</div>
+<div class="inputBox flex flex-col justify-around items-center h-full">
+  <form action="" class="flex lg:flex-col justify-center items-center lg:items-end gap-3">
+    <input type="text" placeholder="Updates in your inbox" class=" h-16 bg-white rounded-full outline-none border-none sm:px-4 sm:py-2 p-1">
+    <button type="submit" class="bg-[#f3613c] px-4 py-2 text-white rounded-full ">Go</button>
+  </form>
+ 
+<p class="text-gray-400 ">&copy; Copyright 2020. All Rights Reserved</p>
+</div> 
+</footer>
+<script>  var burger = document.getElementById('burger')
+  var i = document.querySelector('.navitems')
+  burger.addEventListener('click', () => {
+    i.classList.toggle('right')
+  })</script>
+</body>
+</html>
